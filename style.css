@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: rgb(144, 206, 219);
+}
+
+.hero {
+  width: 80vw;
+  display: grid;
+  gap: 1.5em;
+  position: relative;
+  overflow: visible;
+  background-color: rgb(230, 230, 244);
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.dropdowns__container {
+  background-color: brown;
+  display: grid;
+  gap: 1.5em;
+  width: 80%;
+}
+
+.dropdown {
+  color: var(--secondary);
+  background-color: var(--primary);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+}
+
+.dropdown__checkbox {
+  pointer-events: none;
+}
+
+.dropdown__checkbox:checked .dropdown__menu .dropdown__icon {
+  background-color: black;
+}
+
+.dropdown__checkbox--none {
+  display: none;
+}
+
+.dropdown__menu {
+  position: relative;
+  width: 85%;
+  place-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1em 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown__title {
+  max-width: 80%;
+  line-height: 1.5rem;
+}
+
+.dropdown__icon {
+  display: flex;
+  right: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+  font-size: 2.5em;
+}
+.nav__svg {
+  width: 40px;
+  height: 40px;
+}
+.dropdown__icon--hidden {
+  font-size: 3.2em;
+  opacity: 0;
+}
+
+.dropdown__icon--show {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.dropdown__checkbox:checked + .dropdown__menu .dropdown__icon--show {
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.dropdown__checkbox:checked + .dropdown__menu .dropdown__icon--hidden {
+  opacity: 1;
+  transition: opacity 0.3s 0.3s;
+}
+
+.dropdown__checkbox:not(:checked) + .dropdown__menu .dropdown__icon--show {
+  opacity: 1;
+  transition: 0.3s opacity;
+}
+
+.nav {
+  position: relative;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown .dropdown__checkbox:checked + .dropdown__menu + .nav {
+  max-height: max-content;
+}
+
+.nav__info {
+  width: 85%;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  padding-bottom: 1.5em;
+}
+
+.nav__lists {
+  padding-bottom: 1em;
+  padding-left: 2em;
+  display: grid;
+  gap: 0.5em;
+}
+
+.nav__list {
+  list-style: unset;
+}
+
+.nav__list a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.nav__list a:hover {
+  text-decoration: none;
+}
+
+.dropdowns__icon {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  padding: 0.6em;
+  border-radius: 50%;
+  color: var(--secondary);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2px var(--secondary), 0px 0px 0px 4px var(--primary);
+}
+
+.dropdowns__icon:hover {
+  background-color: var(--quaternary);
+  color: var(--tertiary);
+  box-shadow: 0px 0px 0px 2px var(--secondary),
+    0px 0px 0px 4px var(--quaternary);
+}
+
+main {
+  padding: 10vw 0;
+  display: grid ;
+  gap: 20vh;
+}
+section{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+.imagen-de-michi,.gato-comiendo {
+  width: 100%;
+  display: block;
+}
+.imagen-gato-grande {
+  width: 50%;
+  display: block;
+}
+.listas{
+  padding-left: 20px;
+}
